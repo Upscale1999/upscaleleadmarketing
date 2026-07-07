@@ -1,0 +1,159 @@
+/* Mobile navigation — hamburger button + slide-out drawer */
+
+/* Hamburger button — hidden on desktop */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #ffffff;
+    z-index: 110;
+    line-height: 0;
+    margin-left: 8px;
+}
+.mobile-nav-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Drawer + backdrop */
+#mobile-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 199;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#mobile-drawer-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+#mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 86%;
+    max-width: 380px;
+    background: #1a1a35;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+    padding: 72px 24px 32px;
+    overflow-y: auto;
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.4);
+}
+#mobile-drawer.open {
+    transform: translateX(0);
+}
+
+#mobile-drawer .mobile-nav-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    cursor: pointer;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+#mobile-drawer .mobile-nav-close:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+#mobile-drawer .mobile-nav-close svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+    stroke-linecap: round;
+}
+
+.mobile-nav-section {
+    margin-bottom: 28px;
+}
+.mobile-nav-section h4 {
+    color: #d946ef;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    padding: 0 12px;
+}
+.mobile-nav-section a {
+    display: block;
+    padding: 14px 14px;
+    border-radius: 10px;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin-bottom: 2px;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1.3;
+}
+.mobile-nav-section a:hover {
+    background: rgba(217, 70, 239, 0.08);
+    color: #ffffff;
+}
+.mobile-nav-section a.active {
+    background: rgba(217, 70, 239, 0.14);
+    color: #ffffff;
+}
+.mobile-nav-section a small {
+    display: block;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+#mobile-drawer .mobile-nav-cta {
+    display: block;
+    text-align: center;
+    padding: 16px 24px;
+    margin-top: 8px;
+    background: linear-gradient(135deg, #d946ef, #8b5cf6, #06b6d4);
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    box-shadow: 0 4px 20px rgba(217, 70, 239, 0.3);
+}
+
+/* Body lock when drawer open */
+body.mobile-nav-open {
+    overflow: hidden;
+}
+
+/* Mobile breakpoint — hide desktop nav, show hamburger */
+@media (max-width: 720px) {
+    header .nav-links {
+        display: none !important;
+    }
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+}

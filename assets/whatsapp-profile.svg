@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <!-- Background radial gradient -->
+    <radialGradient id="bgRadial" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#2a1a55" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#16143a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#080814" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Brand gradient (horizontal) -->
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Brand gradient (vertical, for logo) -->
+    <linearGradient id="logoGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Soft glow for logo -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle ambient orbs -->
+    <radialGradient id="orbPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background fill -->
+  <rect width="1080" height="1080" fill="#0a0a18"/>
+  <rect width="1080" height="1080" fill="url(#bgRadial)"/>
+
+  <!-- Ambient orbs (positioned for visibility inside circle crop) -->
+  <circle cx="220" cy="380" r="240" fill="url(#orbPink)"/>
+  <circle cx="880" cy="720" r="280" fill="url(#orbCyan)"/>
+
+  <!-- Logo glow halo -->
+  <circle cx="540" cy="285" r="240" fill="url(#logoGlow)"/>
+
+  <!-- LOGO MARK - hero-sized, centered top -->
+  <g transform="translate(395, 140)">
+    <circle cx="145" cy="145" r="140" fill="url(#logoGrad)"/>
+    <path d="M 95 115 L 95 172 Q 95 203 132 203 L 161 203 Q 198 203 198 172 L 198 102"
+          stroke="#ffffff" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M 157 106 L 198 58 L 239 106 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Brand wordmark "UpScale" -->
+  <text x="540" y="555"
+        text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="900"
+        font-size="172"
+        fill="url(#brandGrad)"
+        letter-spacing="-5">UpScale</text>
+
+  <!-- Refined divider with center dot -->
+  <line x1="360" y1="640" x2="510" y2="640" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+  <circle cx="540" cy="640" r="4" fill="#8b5cf6" fill-opacity="0.85"/>
+  <line x1="570" y1="640" x2="720" y2="640" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Tagline -->
+  <text x="540" y="730"
+        text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="600"
+        font-size="58"
+        fill="#ffffff"
+        letter-spacing="-0.5">Lead Generation Agency</text>
+
+  <!-- Website URL -->
+  <text x="540" y="855"
+        text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="500"
+        font-size="38"
+        fill="#94a3b8"
+        letter-spacing="0.5">upscaleleadmarketing.co.uk</text>
+
+</svg>

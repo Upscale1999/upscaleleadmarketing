@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | UpScale Lead Marketing</title>
+    <meta name="description" content="The page you're looking for has wandered off. Head back to UpScale Lead Marketing's homepage or browse our services and case studies.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark: #0d0d1a;
+            --dark-surface: #141428;
+            --dark-card: #1a1a35;
+            --pink: #d946ef;
+            --cyan: #06b6d4;
+            --gradient: linear-gradient(135deg, #d946ef, #8b5cf6, #06b6d4);
+            --gradient-h: linear-gradient(90deg, #d946ef, #8b5cf6, #06b6d4);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .logo .logo-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--white);
+        }
+        .logo .accent {
+            background: var(--gradient-h);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .error-code {
+            font-size: clamp(6rem, 18vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            background: var(--gradient-h);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -0.04em;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: var(--white);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        p.lead {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 540px;
+            margin: 0 auto 36px;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--gradient);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(217, 70, 239, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(217, 70, 239, 0.45);
+        }
+        .cta-btn.outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(217, 70, 239, 0.4);
+            box-shadow: none;
+        }
+        .cta-btn.outline:hover {
+            background: rgba(217, 70, 239, 0.1);
+            border-color: rgba(217, 70, 239, 0.7);
+        }
+
+        .quick-links {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .quick-links-title {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .quick-links-list {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.92rem;
+        }
+        .quick-links-list a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .quick-links-list a:hover { color: var(--pink); }
+
+        footer {
+            padding: 28px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="container">
+        <a href="/" class="logo" aria-label="UpScale Lead Marketing">
+            <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true">
+                <defs>
+                    <linearGradient id="logoGrad" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0%" stop-color="#d946ef"/>
+                        <stop offset="50%" stop-color="#8b5cf6"/>
+                        <stop offset="100%" stop-color="#06b6d4"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="28" cy="28" r="26" fill="url(#logoGrad)"/>
+                <path d="M 18 22 L 18 33 Q 18 39 25 39 L 31 39 Q 38 39 38 33 L 38 20" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M 30 21 L 38 12 L 46 21 Z" fill="#fff"/>
+            </svg>
+            <span class="logo-name">Up<span class="accent">Scale</span></span>
+        </a>
+
+        <div class="error-code">404</div>
+        <h1>This page took a wrong turn.</h1>
+        <p class="lead">The page you're looking for doesn't exist, has been moved, or never did in the first place. Let's get you back to somewhere useful.</p>
+
+        <div class="cta-row">
+            <a href="/" class="cta-btn">Back to Home</a>
+            <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="cta-btn outline">Book a Discovery Call</a>
+        </div>
+
+        <div class="quick-links">
+            <p class="quick-links-title">Or jump to</p>
+            <div class="quick-links-list">
+                <a href="/">B2C Lead Generation</a>
+                <a href="/b2b-lead-generation">B2B Lead Generation</a>
+                <a href="/case-studies">Case Studies</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; <span id="footer-year">2026</span> UpScale Lead Marketing Ltd.</p>
+</footer>
+
+<script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
