@@ -1098,7 +1098,7 @@
             margin-bottom: 16px;
             max-width: 900px;
         }
-        .footer-company-info strong { color: var(--white); font-weight: 700; }
+        .footer-company-info strong { color: var(--white); font-weight: 800; }
         .footer-bottom-row {
             display: flex;
             justify-content: space-between;
@@ -1305,16 +1305,16 @@
     <div class="nh-wrap nh-stat-bento-wrap">
         <div class="nh-stat-bento">
             <div class="nh-stat-card fade-up">
-                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="1500" data-suffix="+">0</span></div>
-                <div class="nh-stat-label">leads generated for UpScale clients</div>
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="1483" data-suffix="">0</span></div>
+                <div class="nh-stat-label">leads delivered YTD</div>
             </div>
             <div class="nh-stat-card fade-up">
-                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="70" data-suffix="+">0</span></div>
-                <div class="nh-stat-label">local service businesses helped</div>
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="27" data-suffix="">0</span></div>
+                <div class="nh-stat-label">UK businesses trust us to fill their pipeline</div>
             </div>
             <div class="nh-stat-card fade-up">
-                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="40" data-suffix="+">0</span></div>
-                <div class="nh-stat-label">years of combined team experience</div>
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="7" data-suffix=" days">0</span></div>
+                <div class="nh-stat-label">average time from onboarding to first lead</div>
             </div>
         </div>
     </div>
@@ -1735,7 +1735,7 @@
                         current = target;
                         clearInterval(timer);
                     }
-                    el.textContent = current + (el.dataset.suffix !== undefined ? el.dataset.suffix : '+');
+                    el.textContent = current.toLocaleString('en-GB') + (el.dataset.suffix !== undefined ? el.dataset.suffix : '+');
                 }, 30);
                 statObserver.unobserve(el);
             }
