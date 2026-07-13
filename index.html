@@ -95,50 +95,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Why work with UpScale?",
+                "name": "I've tried ads or agencies before and it didn't work.",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We combine multi-channel traffic expertise with custom landing pages and advanced qualification to deliver exclusive, high-quality leads. Unlike other agencies, your leads are never shared with competitors."
+                    "text": "Most bad experiences come from black-box agencies with zero visibility. Every campaign starts with a Campaign Approval Document before spend, plus weekly reporting and a live dashboard, and your leads are exclusive, never shared with competitors."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How do you qualify leads?",
+                "name": "How is this different from a freelancer or a cheap agency?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We build tailored qualification forms with targeted questions specific to your sector. This filters out tyre-kickers and ensures you only receive leads with genuine buying intent."
+                    "text": "You get a marketing director (10 years' experience) and a project manager (15 years' experience), a five-person team, not one generalist juggling ten other clients. Strategy, creative, landing pages, lead qualification, and follow-up are all handled."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Which sectors do you work with?",
+                "name": "I don't have time to deal with an agency.",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We work across 50+ sectors including professional services, home improvement, healthcare, finance, education, and more. Our approach is customised for each industry's unique requirements."
+                    "text": "That's exactly what this removes. A 20-minute discovery call, instant platform access, and a direct WhatsApp line, no lengthy onboarding, no micromanaging required."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What level of support do you provide?",
+                "name": "What if the leads are bad quality?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Every client gets a dedicated account manager. You'll have direct access for questions, strategy discussions, and campaign updates, no support tickets or chatbots."
+                    "text": "Leads are exclusive and delivered in real time, with lead-quality feedback built into the dashboard, and results are guaranteed within 14 days of going live."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How quickly will I see results?",
+                "name": "How fast can this actually start?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Most clients start receiving leads within the first week of campaign launch. We continuously optimise from day one to improve quality and volume over time."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What involvement is required from me?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Minimal. After an initial onboarding call to understand your business, we handle everything. You just need to follow up with the leads we deliver and provide feedback through our platform."
+                    "text": "Live with ads in 5 days. Days 1 to 3 cover research, strategy, and sign-off on your Campaign Approval Document; from day 5 you're live and leads start flowing."
                 }
             }
         ]
@@ -417,110 +409,282 @@
             .nav-links > *:not(.cta-btn) { display: none; }
         }
 
+        /* ================================================================
+           NEW HOMEPAGE (2026 redesign) — replaces old Hero/How It
+           Works/Stats/Onboarding/Team/FAQ sections above. Real header,
+           footer, cookie banner, mobile nav, B2B teaser and Contact
+           section are all untouched.
+           ================================================================ */
+        :root{
+          --nh-bg:#fbfafa;
+          --nh-surface:#ffffff;
+          --nh-ink:#17131b;
+          --nh-ink-soft:#5b5560;
+          --nh-muted:#948c96;
+          --nh-border:#ece6ea;
+          --nh-pink-soft:rgba(217,70,239,0.09);
+          --nh-grad-text:linear-gradient(135deg, #d946ef 0%, #8b5cf6 55%, #06b6d4 100%);
+          --nh-hero-bg:#150f18;
+          --nh-hero-border:rgba(255,255,255,0.10);
+          --nh-radius-lg:2.25rem;
+          --nh-radius-md:1.5rem;
+          --nh-radius-sm:1rem;
+          --nh-shadow-diffuse:0 24px 48px -22px rgba(217,70,239,0.16), 0 8px 20px -14px rgba(23,19,27,0.08);
+          --nh-ease:cubic-bezier(0.16,1,0.3,1);
+        }
+        .nh-wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+        .nh-eyebrow{
+          display:inline-flex;align-items:center;gap:0.5rem;
+          font-size:0.8rem;font-weight:600;letter-spacing:0.02em;color:var(--pink);
+        }
+        .nh-eyebrow .nh-dot{width:6px;height:6px;border-radius:50%;background:var(--gradient);}
+        .nh-lede{font-size:1.05rem;line-height:1.6;color:var(--nh-ink-soft);max-width:52ch;}
+        .nh-grad-text{background:var(--nh-grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .nh-btn{
+          display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+          padding:0.85rem 1.6rem;border-radius:999px;border:1px solid transparent;
+          font-weight:600;font-size:0.95rem;white-space:nowrap;text-decoration:none;
+          transition:transform 0.3s var(--nh-ease), background-position 0.5s var(--nh-ease), box-shadow 0.3s var(--nh-ease);
+        }
+        .nh-btn:active{transform:scale(0.97);}
+        .nh-btn-accent{background:var(--gradient);background-size:200% auto;background-position:0% center;color:#fff;box-shadow:0 14px 28px -12px rgba(217,70,239,0.5);}
+        .nh-btn-accent:hover{background-position:100% center;transform:translateY(-2px);}
+        .nh-btn-ghost{background:rgba(255,255,255,0.06);color:#fff;border-color:var(--nh-hero-border);}
+        .nh-btn-ghost:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
+        .nh-section{padding:88px 0;background:var(--nh-surface);}
+        .nh-section-head{max-width:640px;margin-bottom:3rem;}
+        .nh-section-head h2{font-size:2rem;font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin:0;color:var(--nh-ink);}
+        @media (min-width:768px){ .nh-section-head h2{font-size:2.5rem;} }
+        .nh-section-head .nh-lede{margin-top:0.9rem;}
+
         /* Hero */
-        #hero {
-            padding: 200px 0 100px;
-            background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-            text-align: center;
+        .nh-hero{
+          background:var(--nh-hero-bg);color:#fff;
+          padding:72px 0 96px;position:relative;
+          border-bottom:1px solid var(--nh-hero-border);
+          overflow:hidden;
         }
-        #hero .section-title {
-            font-size: clamp(2.5rem, 6vw, 3.8rem);
-            max-width: 800px;
-            margin: 0 auto 20px;
+        .nh-hero-photo{position:absolute;inset:0;z-index:0;}
+        .nh-hero-photo img{width:100%;height:100%;object-fit:cover;opacity:0.28;}
+        .nh-hero-photo::after{
+          content:"";position:absolute;inset:0;
+          background:linear-gradient(180deg, rgba(21,15,24,0.55), rgba(21,15,24,0.92) 70%), radial-gradient(55% 55% at 22% 15%, rgba(217,70,239,0.35), transparent 70%), radial-gradient(45% 45% at 85% 75%, rgba(6,182,212,0.22), transparent 70%);
         }
-        #hero .section-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-        }
-        .social-proof {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 32px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .avatars {
-            display: flex;
-        }
-        .avatars span {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-left: -8px;
-            border: 2px solid var(--dark);
-        }
-        .avatars span:first-child { margin-left: 0; }
-        .avatars span:nth-child(1) { background: #d946ef; }
-        .avatars span:nth-child(2) { background: #8b5cf6; }
-        .avatars span:nth-child(3) { background: #06b6d4; }
-        .avatars span:nth-child(4) { background: #6366f1; }
-        .avatars span:nth-child(5) { background: #ec4899; }
+        .nh-hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;position:relative;z-index:1;}
+        @media (min-width:1024px){ .nh-hero-grid{grid-template-columns:1.15fr 1fr;gap:32px;} }
+        .nh-hero h1{font-size:2.5rem;font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-top:1.1rem;color:#fff;}
+        @media (min-width:640px){ .nh-hero h1{font-size:3.4rem;} }
+        @media (min-width:1024px){ .nh-hero h1{font-size:3.75rem;} }
+        .nh-hero .nh-lede{color:rgba(255,255,255,0.68);margin-top:1.25rem;max-width:44ch;}
+        .nh-hero-cta-row{display:flex;flex-wrap:wrap;gap:0.85rem;margin-top:2.25rem;}
 
-        /* How It Works */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+        .nh-dash-mock{
+          position:relative;border-radius:var(--nh-radius-lg);
+          background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+          border:1px solid var(--nh-hero-border);
+          box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 30px 60px -30px rgba(0,0,0,0.6);
+          padding:1.25rem;animation:nhFloat 7s ease-in-out infinite;
         }
-        .step-card {
-            background: var(--dark-card);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 32px;
-            transition: transform 0.2s, border-color 0.2s;
+        @keyframes nhFloat{ 0%,100%{transform:translateY(0px);} 50%{transform:translateY(-10px);} }
+        .nh-dash-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.9rem;}
+        .nh-dash-head-left{display:flex;align-items:baseline;gap:0.6rem;}
+        .nh-dash-title{font-size:0.88rem;font-weight:700;color:#fff;}
+        .nh-dash-count{font-size:0.72rem;color:rgba(255,255,255,0.45);}
+        .nh-live-badge{
+          display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;font-weight:600;
+          color:#f0abfc;background:rgba(217,70,239,0.16);border:1px solid rgba(217,70,239,0.4);
+          padding:0.3rem 0.6rem;border-radius:999px;
         }
-        .step-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(217, 70, 239, 0.3);
+        .nh-live-dot{width:6px;height:6px;border-radius:50%;background:var(--pink);animation:nhBreathe 1.8s ease-in-out infinite;}
+        @keyframes nhBreathe{ 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(217,70,239,0.55);} 50%{opacity:0.55;box-shadow:0 0 0 6px rgba(217,70,239,0);} }
+        .nh-dash-tabs{display:flex;gap:0.4rem;margin-bottom:0.9rem;}
+        .nh-dash-tab{
+          font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.45);
+          padding:0.3rem 0.7rem;border-radius:999px;border:1px solid transparent;
+          transition:background 0.25s var(--nh-ease), color 0.25s var(--nh-ease);
         }
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: var(--gradient);
-            color: var(--white);
-            font-weight: 800;
-            font-size: 1rem;
-            margin-bottom: 16px;
+        .nh-dash-tab.nh-is-active{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.1);color:#fff;}
+        .nh-lead-list{position:relative;}
+        .nh-lead-card{
+          display:flex;align-items:center;gap:0.85rem;
+          background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
+          border-radius:var(--nh-radius-sm);padding:0.8rem 0.9rem;margin-bottom:0.6rem;
         }
-        .step-card h3 {
-            font-size: 1.2rem;
-            color: var(--white);
-            margin-bottom: 8px;
+        .nh-lead-card:last-child{margin-bottom:0;}
+        .nh-lead-avatar{
+          width:2.2rem;height:2.2rem;border-radius:0.6rem;flex-shrink:0;
+          display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;color:#fff;
         }
-        .step-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        .nh-lead-body{flex:1;min-width:0;}
+        .nh-lead-name-row{display:flex;align-items:center;gap:0.4rem;}
+        .nh-lead-name{font-size:0.85rem;font-weight:600;color:#fff;}
+        .nh-lead-unread-dot{width:6px;height:6px;border-radius:50%;background:var(--pink);flex-shrink:0;}
+        .nh-lead-meta{font-size:0.74rem;color:rgba(255,255,255,0.45);}
+        .nh-lead-channel{color:rgba(255,255,255,0.65);font-weight:600;}
+        .nh-lead-time{font-size:0.72rem;color:rgba(255,255,255,0.35);white-space:nowrap;}
+        .nh-dash-foot{
+          display:flex;justify-content:space-between;align-items:center;
+          margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.07);
+          font-size:0.72rem;color:rgba(255,255,255,0.4);
         }
 
-        /* Stats */
-        #stats { background: var(--dark-surface); }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
+        /* Marquee */
+        .nh-marquee-band{background:var(--nh-hero-bg);border-bottom:1px solid var(--nh-hero-border);padding:0.85rem 0;overflow:hidden;}
+        .nh-marquee-track{display:flex;width:max-content;gap:2.75rem;animation:nhMarquee 34s linear infinite;}
+        .nh-marquee-band:hover .nh-marquee-track{animation-play-state:paused;}
+        .nh-marquee-item{display:flex;align-items:center;gap:0.65rem;white-space:nowrap;font-size:0.82rem;font-weight:600;letter-spacing:0.02em;color:rgba(255,255,255,0.82);}
+        .nh-marquee-item .nh-sep{width:5px;height:5px;border-radius:50%;background:var(--gradient);flex-shrink:0;}
+        @keyframes nhMarquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+        @media (prefers-reduced-motion:reduce){ .nh-marquee-track{animation:none;} }
+
+        /* Stat bento */
+        .nh-stat-band{padding:56px 0;border-bottom:1px solid var(--nh-border);background:var(--nh-surface);}
+        .nh-stat-bento-wrap{max-width:960px;margin:0 auto;}
+        .nh-stat-bento{display:grid;grid-template-columns:1fr;gap:1.25rem;}
+        @media (min-width:640px){ .nh-stat-bento{grid-template-columns:repeat(3,1fr);} }
+        .nh-stat-card{
+          background:var(--nh-surface);border:1px solid var(--nh-border);border-radius:var(--nh-radius-md);
+          padding:1.75rem;box-shadow:0 14px 32px -12px rgba(23,19,27,0.18), 0 4px 10px -4px rgba(23,19,27,0.08);
+          transition:transform 0.35s var(--nh-ease), box-shadow 0.35s var(--nh-ease);
         }
-        .stat-item { text-align: center; }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
+        .nh-stat-card:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(23,19,27,0.22), 0 6px 14px -4px rgba(23,19,27,0.1);}
+        .nh-stat-num{font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;color:var(--nh-ink);}
+        .nh-stat-label{font-size:0.88rem;color:var(--nh-ink-soft);margin-top:0.35rem;}
+
+        /* Why UpScale bento panel */
+        .nh-why-panel{background:var(--gradient);border-radius:var(--nh-radius-lg);padding:48px 24px;position:relative;overflow:hidden;}
+        @media (min-width:768px){ .nh-why-panel{padding:64px 48px;} }
+        .nh-why-head{max-width:640px;margin:0 auto 2.5rem;text-align:center;}
+        .nh-why-head h2{color:#fff;font-size:2rem;font-weight:700;letter-spacing:-0.03em;margin-top:0.6rem;}
+        @media (min-width:768px){ .nh-why-head h2{font-size:2.6rem;} }
+        .nh-why-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center;}
+        @media (min-width:960px){ .nh-why-grid{grid-template-columns:1fr 0.9fr 1fr;gap:1.75rem;} }
+        .nh-why-col{display:flex;flex-direction:column;gap:1.25rem;}
+        .nh-why-card{background:rgba(255,255,255,0.97);border-radius:var(--nh-radius-md);padding:1.5rem;box-shadow:0 20px 40px -20px rgba(0,0,0,0.25);}
+        .nh-why-icon{
+          width:2.5rem;height:2.5rem;border-radius:0.75rem;background:var(--nh-pink-soft);color:var(--pink);
+          display:flex;align-items:center;justify-content:center;margin-bottom:1rem;
         }
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-top: 4px;
+        .nh-why-icon svg{width:18px;height:18px;}
+        .nh-why-card h3{font-size:1.05rem;margin-bottom:0.5rem;color:var(--nh-ink);font-weight:700;}
+        .nh-why-card p{font-size:0.88rem;color:var(--nh-ink-soft);line-height:1.6;}
+        .nh-why-phone{display:flex;justify-content:center;}
+        .nh-why-phone-frame{
+          width:16rem;max-width:100%;aspect-ratio:9/17;
+          background:var(--nh-hero-bg);border-radius:2.6rem;padding:0.75rem;
+          box-shadow:0 40px 70px -20px rgba(0,0,0,0.45), inset 0 0 0 2px rgba(255,255,255,0.1);
+          position:relative;
         }
+        @media (max-width:479px){ .nh-why-phone-frame{width:14rem;} }
+        .nh-why-phone-screen{
+          position:relative;width:100%;height:100%;overflow:hidden;
+          background:var(--nh-surface);border-radius:1.9rem;padding:32px 16px 20px;
+          display:flex;flex-direction:column;
+        }
+        .nh-why-phone-notch{position:absolute;top:0.65rem;left:50%;transform:translateX(-50%);z-index:2;width:5rem;height:1.35rem;border-radius:999px;background:var(--nh-hero-bg);}
+        .nh-why-phone-home{position:absolute;bottom:0.55rem;left:50%;transform:translateX(-50%);width:5rem;height:0.28rem;border-radius:999px;background:rgba(21,15,24,0.18);}
+        .nh-why-phone-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;}
+        .nh-why-phone-title{font-size:0.88rem;font-weight:700;color:var(--nh-ink);}
+        .nh-why-phone-live{display:flex;align-items:center;gap:0.32rem;font-size:0.64rem;font-weight:700;color:var(--pink);}
+        .nh-why-phone-live .nh-dot{width:5px;height:5px;border-radius:50%;background:var(--pink);animation:nhBreathe 1.8s ease-in-out infinite;}
+        .nh-why-phone-tabs{display:flex;gap:0.35rem;margin-bottom:0.75rem;}
+        .nh-why-phone-tab{font-size:0.62rem;font-weight:600;color:var(--nh-muted);padding:0.25rem 0.6rem;border-radius:999px;background:var(--nh-bg);}
+        .nh-why-phone-tab.nh-is-active{background:var(--nh-pink-soft);color:var(--pink);}
+        .nh-why-lead-list{flex:1;display:flex;flex-direction:column;}
+        .nh-why-lead-row{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0;border-bottom:1px solid var(--nh-border);flex:1;}
+        .nh-why-lead-row:last-child{border-bottom:none;}
+        .nh-why-lead-avatar{width:1.9rem;height:1.9rem;border-radius:0.5rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.66rem;font-weight:700;color:#fff;}
+        .nh-why-lead-body{flex:1;min-width:0;}
+        .nh-why-lead-name-row{display:flex;align-items:center;gap:0.35rem;}
+        .nh-why-lead-name{font-size:0.76rem;font-weight:600;color:var(--nh-ink);}
+        .nh-why-lead-unread{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0;}
+        .nh-why-lead-meta{font-size:0.64rem;color:var(--nh-muted);margin-top:0.1rem;}
+        .nh-why-lead-time{font-size:0.62rem;color:var(--nh-muted);white-space:nowrap;}
+
+        /* How it works timeline */
+        .nh-how-grid-single{max-width:700px;margin:0 auto;}
+        .nh-how-head{max-width:700px;margin:0 auto 3rem;text-align:center;}
+        .nh-how-head h2{font-size:2rem;font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin:0;color:var(--nh-ink);}
+        @media (min-width:768px){ .nh-how-head h2{font-size:2.5rem;} }
+        .nh-timeline{position:relative;}
+        .nh-tl-step{position:relative;display:grid;grid-template-columns:3.5rem 1fr;gap:1.25rem;padding-bottom:2.75rem;}
+        .nh-tl-step:last-child{padding-bottom:0;}
+        .nh-tl-step::before{
+          content:"";position:absolute;left:1.75rem;top:3.5rem;bottom:-0.5rem;width:2px;transform:translateX(-50%);
+          background:linear-gradient(180deg, rgba(217,70,239,0.55), rgba(6,182,212,0.55));
+        }
+        .nh-tl-step:last-child::before{display:none;}
+        .nh-tl-num{
+          width:3.5rem;height:3.5rem;border-radius:50%;
+          background:linear-gradient(var(--nh-surface), var(--nh-surface)) padding-box, var(--gradient) border-box;
+          border:2px solid transparent;display:flex;align-items:center;justify-content:center;
+          font-size:1.15rem;font-weight:800;color:var(--pink);position:relative;z-index:1;box-shadow:0 0 0 6px var(--nh-surface);
+        }
+        .nh-tl-step h3{font-size:1.08rem;margin-bottom:0.35rem;padding-top:0.5rem;color:var(--nh-ink);font-weight:700;}
+        .nh-tl-step p{color:var(--nh-ink-soft);font-size:0.92rem;line-height:1.6;max-width:52ch;}
+
+        /* Team */
+        .nh-team-band{background:var(--nh-surface);color:var(--nh-ink);}
+        .nh-team-band .nh-section-head{margin-left:auto;margin-right:auto;text-align:center;}
+        .nh-team-band .nh-section-head h2{color:var(--nh-ink);}
+        .nh-team-band .nh-lede{color:var(--nh-ink-soft);margin-left:auto;margin-right:auto;}
+        .nh-team-photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1.5rem;text-align:center;}
+        @media (min-width:768px){ .nh-team-photo-grid{grid-template-columns:repeat(4,1fr);} }
+        .nh-team-photo-ring{width:8.25rem;height:8.25rem;border-radius:50%;background:var(--gradient);padding:4px;margin:0 auto 1.1rem;transition:transform 0.4s var(--nh-ease);}
+        .nh-team-photo-member:hover .nh-team-photo-ring{transform:translateY(-4px);}
+        .nh-team-photo-inner{width:100%;height:100%;border-radius:50%;background:var(--nh-surface);padding:4px;}
+        .nh-team-photo-inner img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;}
+        .nh-team-photo-name{font-weight:700;font-size:1.05rem;}
+        .nh-team-photo-role{font-size:0.86rem;color:var(--nh-muted);margin-top:0.2rem;}
+
+        /* Case studies */
+        .nh-case-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+        @media (min-width:700px){ .nh-case-grid{grid-template-columns:repeat(2,1fr);} }
+        .nh-case-card{
+          position:relative;overflow:hidden;border-radius:var(--nh-radius-lg);
+          padding:2.25rem;display:flex;flex-direction:column;justify-content:flex-end;min-height:380px;
+          color:#fff;box-shadow:0 20px 40px -20px rgba(23,19,27,0.3);
+          transition:transform 0.45s var(--nh-ease), box-shadow 0.45s var(--nh-ease);
+        }
+        .nh-case-card:hover{transform:translateY(-6px);box-shadow:0 34px 60px -20px rgba(23,19,27,0.4);}
+        .nh-case-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 0.7s var(--nh-ease);}
+        .nh-case-card:hover img{transform:scale(1.08);}
+        .nh-case-card::before{
+          content:"";position:absolute;inset:0;z-index:1;
+          background:linear-gradient(180deg, rgba(21,15,24,0.3), rgba(21,15,24,0.94)), linear-gradient(140deg, rgba(217,70,239,0.28), transparent 55%);
+        }
+        .nh-case-card::after{
+          content:"";position:absolute;inset:0;z-index:1;opacity:0;
+          background:linear-gradient(150deg, rgba(217,70,239,0.4), transparent 65%);
+          transition:opacity 0.45s var(--nh-ease);
+        }
+        .nh-case-card:hover::after{opacity:1;}
+        .nh-case-card > *{position:relative;z-index:2;}
+        .nh-case-card .nh-tag{font-size:0.74rem;font-weight:600;color:#f0abfc;letter-spacing:0.02em;text-transform:uppercase;}
+        .nh-case-card h3{font-size:1.5rem;margin-top:0.6rem;font-weight:700;}
+        .nh-case-card .nh-result{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-top:1.5rem;line-height:1.5;transition:transform 0.45s var(--nh-ease);}
+        .nh-case-card:hover .nh-result{transform:translateY(-3px);}
+        .nh-disclaimer{font-size:0.8rem;color:var(--nh-muted);margin-top:1.5rem;}
+
+        /* FAQ */
+        .nh-faq{max-width:760px;display:flex;flex-direction:column;gap:1rem;}
+        .nh-faq details{
+          border:1px solid var(--nh-border);border-radius:var(--nh-radius-md);padding:1.4rem 1.6rem;
+          background:var(--nh-surface);box-shadow:var(--nh-shadow-diffuse);transition:transform 0.3s var(--nh-ease);
+        }
+        .nh-faq details[open]{transform:translateY(-2px);}
+        .nh-faq details summary{
+          list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+          font-weight:600;font-size:1.02rem;color:var(--nh-ink);
+        }
+        .nh-faq details summary::-webkit-details-marker{display:none;}
+        .nh-faq-plus{
+          width:1.6rem;height:1.6rem;border-radius:50%;border:1px solid var(--nh-border);flex-shrink:0;
+          display:flex;align-items:center;justify-content:center;transition:transform 0.35s var(--nh-ease), background 0.35s var(--nh-ease);color:var(--nh-ink);
+        }
+        .nh-faq details[open] .nh-faq-plus{transform:rotate(45deg);background:var(--gradient);border-color:transparent;color:#fff;}
+        .nh-faq-plus svg{width:14px;height:14px;}
+        .nh-faq details p{color:var(--nh-ink-soft);font-size:0.95rem;line-height:1.65;margin-top:0.9rem;max-width:62ch;}
 
         /* Testimonial */
         #testimonial { background: var(--dark-surface); }
@@ -601,47 +765,6 @@
             margin: 48px auto 0;
         }
 
-        /* Team photos grid */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-        }
-        .founders-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            justify-content: center;
-            gap: 32px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .team-member {
-            text-align: center;
-        }
-        .team-photo {
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            overflow: hidden;
-            background: var(--dark-card);
-            border: 3px solid rgba(217, 70, 239, 0.35);
-            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
-            max-width: 220px;
-        }
-        .team-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .team-member h3 {
-            color: var(--white);
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-        }
-        .team-member p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
 
         /* Results visual (case study) */
         .results-visual {
@@ -858,158 +981,6 @@
             .b2b-teaser p { margin: 0 auto; }
         }
 
-        /* Onboarding timeline */
-        #onboarding {
-            background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
-        }
-        .timeline {
-            max-width: 760px;
-            margin: 56px auto 0;
-            position: relative;
-            text-align: left;
-        }
-        .timeline-step {
-            position: relative;
-            display: grid;
-            grid-template-columns: 64px 1fr;
-            gap: 24px;
-            padding-bottom: 48px;
-        }
-        .timeline-step:last-child {
-            padding-bottom: 0;
-        }
-        .timeline-step::before {
-            content: '';
-            position: absolute;
-            left: 31px;
-            top: 56px;
-            bottom: -8px;
-            width: 2px;
-            background: linear-gradient(180deg, rgba(217, 70, 239, 0.6), rgba(6, 182, 212, 0.6));
-        }
-        .timeline-step:last-child::before {
-            display: none;
-        }
-        .timeline-num {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: var(--dark-card);
-            border: 2px solid;
-            border-image: var(--gradient) 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--white);
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 0 0 6px rgba(13, 13, 26, 1), 0 8px 24px rgba(139, 92, 246, 0.25);
-        }
-        /* Fallback because border-image + radius can be inconsistent across browsers */
-        .timeline-num {
-            background:
-                linear-gradient(var(--dark-card), var(--dark-card)) padding-box,
-                var(--gradient) border-box;
-            border: 2px solid transparent;
-        }
-        .timeline-content {
-            padding-top: 8px;
-        }
-        .timeline-when {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(217, 70, 239, 0.1);
-            border: 1px solid rgba(217, 70, 239, 0.25);
-            border-radius: 50px;
-            color: var(--pink);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .timeline-content h3 {
-            color: var(--white);
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .timeline-content p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .timeline-content p:last-child {
-            margin-bottom: 0;
-        }
-        .timeline-callout {
-            color: var(--pink);
-            font-weight: 600;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-top: 8px;
-            display: inline-flex;
-            align-items: flex-start;
-            gap: 6px;
-        }
-        #onboarding .cta-btn {
-            margin-top: 56px;
-        }
-        @media (max-width: 600px) {
-            .timeline { margin-top: 32px; }
-            .timeline-step { grid-template-columns: 48px 1fr; gap: 16px; padding-bottom: 36px; }
-            .timeline-step::before { left: 23px; top: 48px; }
-            .timeline-num { width: 48px; height: 48px; font-size: 1.1rem; box-shadow: 0 0 0 4px rgba(13, 13, 26, 1), 0 6px 18px rgba(139, 92, 246, 0.25); }
-            .timeline-content { padding-top: 4px; }
-            .timeline-content h3 { font-size: 1.1rem; }
-        }
-
-        /* FAQ */
-        .faq-list { max-width: 700px; margin: 0 auto; }
-        .faq-item {
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.05rem;
-            font-weight: 600;
-            padding: 20px 0;
-            text-align: left;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: inherit;
-        }
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--pink);
-            transition: transform 0.2s;
-        }
-        .faq-item.open .faq-question::after {
-            content: '-';
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        .faq-answer p {
-            padding-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 300px;
-        }
 
         /* Final CTA */
         #final-cta {
@@ -1228,7 +1199,7 @@
             <a href="/case-studies">Case Studies</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
-            <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="cta-btn">Book a Discovery Call</a>
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1sJpXKtr1jm802a2EMK597RTryEQaD0jJoI9iWE8EeyaUkzfrWXfEAqWDOs5LT7fXthfNcO2AZ" target="_blank" rel="noopener" class="cta-btn">Book a Discovery Call</a>
         </nav>
         <button type="button" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -1236,218 +1207,395 @@
     </div>
 </header>
 
-<!-- Hero -->
-<section id="hero">
-    <div class="container">
+<!-- Hero (new homepage) -->
+<section class="nh-hero" id="offer">
+    <div class="nh-hero-photo">
+        <img src="https://images.unsplash.com/photo-1657700819262-18792be64208?auto=format&fit=crop&w=1800&q=80" alt="Manchester city skyline at night">
+    </div>
+    <div class="nh-wrap nh-hero-grid">
         <div class="fade-up">
-            <span class="section-label">EXCLUSIVE B2C LEAD GENERATION</span>
-            <h1 class="section-title">Exclusive customer leads, <span class="gradient-text">delivered daily.</span></h1>
-            <p class="section-subtitle">Done for you Meta &amp; Google ads, custom landing pages, and instant multi-channel follow-up. Built for home services, healthcare, finance, automotive and other consumer-facing businesses.</p>
-            <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="cta-btn">Book a Discovery Call</a>
+            <span class="nh-eyebrow"><span class="nh-dot"></span>Done-for-you Meta &amp; Google Ads</span>
+            <h1>More jobs booked.<br>Zero <span class="nh-grad-text">ad-account</span> headaches.</h1>
+            <p class="nh-lede">Get you noticed by the people that matter and generate new revenue opportunities for your business.</p>
+            <div class="nh-hero-cta-row">
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1sJpXKtr1jm802a2EMK597RTryEQaD0jJoI9iWE8EeyaUkzfrWXfEAqWDOs5LT7fXthfNcO2AZ" target="_blank" rel="noopener" class="nh-btn nh-btn-accent">Book your discovery call</a>
+                <a href="#how-it-works" class="nh-btn nh-btn-ghost">See how it works</a>
+            </div>
+        </div>
+
+        <div class="fade-up">
+            <div class="nh-dash-mock">
+                <div class="nh-dash-head">
+                    <div class="nh-dash-head-left">
+                        <span class="nh-dash-title">Lead Inbox</span>
+                        <span class="nh-dash-count">4 new today</span>
+                    </div>
+                    <span class="nh-live-badge"><span class="nh-live-dot"></span>Live</span>
+                </div>
+                <div class="nh-dash-tabs">
+                    <span class="nh-dash-tab nh-is-active">All</span>
+                    <span class="nh-dash-tab">New</span>
+                    <span class="nh-dash-tab">Contacted</span>
+                </div>
+                <div class="nh-lead-list">
+                    <div class="nh-lead-card">
+                        <div class="nh-lead-avatar" style="background:#d946ef;">ST</div>
+                        <div class="nh-lead-body">
+                            <div class="nh-lead-name-row"><span class="nh-lead-name">Sarah T.</span><span class="nh-lead-unread-dot"></span></div>
+                            <div class="nh-lead-meta"><span class="nh-lead-channel">Paid Social</span> &middot; Requested a free quote</div>
+                        </div>
+                        <div class="nh-lead-time">Just now</div>
+                    </div>
+                    <div class="nh-lead-card">
+                        <div class="nh-lead-avatar" style="background:#8b5cf6;">JO</div>
+                        <div class="nh-lead-body">
+                            <div class="nh-lead-name-row"><span class="nh-lead-name">James O.</span></div>
+                            <div class="nh-lead-meta"><span class="nh-lead-channel">Search Ads</span> &middot; Booked a consultation</div>
+                        </div>
+                        <div class="nh-lead-time">3m ago</div>
+                    </div>
+                    <div class="nh-lead-card">
+                        <div class="nh-lead-avatar" style="background:#06b6d4;">PK</div>
+                        <div class="nh-lead-body">
+                            <div class="nh-lead-name-row"><span class="nh-lead-name">Priya K.</span></div>
+                            <div class="nh-lead-meta"><span class="nh-lead-channel">Landing Page</span> &middot; Asked about pricing</div>
+                        </div>
+                        <div class="nh-lead-time">9m ago</div>
+                    </div>
+                    <div class="nh-lead-card">
+                        <div class="nh-lead-avatar" style="background:#6366f1;">DM</div>
+                        <div class="nh-lead-body">
+                            <div class="nh-lead-name-row"><span class="nh-lead-name">Daniel M.</span></div>
+                            <div class="nh-lead-meta"><span class="nh-lead-channel">Referral</span> &middot; Requested a callback</div>
+                        </div>
+                        <div class="nh-lead-time">17m ago</div>
+                    </div>
+                </div>
+                <div class="nh-dash-foot">
+                    <span>Exclusive &middot; never shared with competitors</span>
+                    <span>Updated in real time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marquee -->
+<div class="nh-marquee-band" aria-label="Key facts">
+    <div class="nh-marquee-track">
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Live with ads in 5 days</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Results in 14 days</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Exclusive leads — never shared with competitors</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>20-minute discovery call, no obligation</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Meta Ads managed end-to-end</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Email marketing built to convert</span>
+        <span class="nh-marquee-item"><span class="nh-sep"></span>Google Ads that book more calls</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Live with ads in 5 days</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Results in 14 days</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Exclusive leads — never shared with competitors</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>20-minute discovery call, no obligation</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Meta Ads managed end-to-end</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Email marketing built to convert</span>
+        <span class="nh-marquee-item" aria-hidden="true"><span class="nh-sep"></span>Google Ads that book more calls</span>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="nh-stat-band">
+    <div class="nh-wrap nh-stat-bento-wrap">
+        <div class="nh-stat-bento">
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="1500" data-suffix="+">0</span></div>
+                <div class="nh-stat-label">leads generated for UpScale clients</div>
+            </div>
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="70" data-suffix="+">0</span></div>
+                <div class="nh-stat-label">local service businesses helped</div>
+            </div>
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="40" data-suffix="+">0</span></div>
+                <div class="nh-stat-label">years of combined team experience</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why UpScale -->
+<section class="nh-section">
+    <div class="nh-wrap">
+        <div class="nh-why-panel fade-up">
+            <div class="nh-why-head">
+                <span class="nh-eyebrow" style="color:rgba(255,255,255,0.9);"><span class="nh-dot" style="background:#fff;"></span>Why UpScale</span>
+                <h2>The smartest way to fill your pipeline.</h2>
+            </div>
+            <div class="nh-why-grid">
+                <div class="nh-why-col">
+                    <div class="nh-why-card fade-up">
+                        <div class="nh-why-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+                        </div>
+                        <h3>Real-time lead delivery</h3>
+                        <p>Every enquiry lands in your dashboard the moment it comes in, with email and SMS alerts built in.</p>
+                    </div>
+                    <div class="nh-why-card fade-up">
+                        <div class="nh-why-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3z"/></svg>
+                        </div>
+                        <h3>Done for you, start to finish</h3>
+                        <p>We build the campaigns and generate the leads — every enquiry gets sent straight to you. No ad accounts, no agencies to manage yourself.</p>
+                    </div>
+                </div>
+
+                <div class="nh-why-phone fade-up">
+                    <div class="nh-why-phone-frame">
+                        <div class="nh-why-phone-notch"></div>
+                        <div class="nh-why-phone-screen">
+                            <div class="nh-why-phone-head">
+                                <span class="nh-why-phone-title">Lead Inbox</span>
+                                <span class="nh-why-phone-live"><span class="nh-dot"></span>Live</span>
+                            </div>
+                            <div class="nh-why-phone-tabs">
+                                <span class="nh-why-phone-tab nh-is-active">All</span>
+                                <span class="nh-why-phone-tab">New</span>
+                                <span class="nh-why-phone-tab">Contacted</span>
+                            </div>
+                            <div class="nh-why-lead-list">
+                                <div class="nh-why-lead-row">
+                                    <div class="nh-why-lead-avatar" style="background:#d946ef;">ST</div>
+                                    <div class="nh-why-lead-body">
+                                        <div class="nh-why-lead-name-row"><span class="nh-why-lead-name">Sarah T.</span><span class="nh-why-lead-unread"></span></div>
+                                        <div class="nh-why-lead-meta">Paid Social &middot; Free quote</div>
+                                    </div>
+                                    <span class="nh-why-lead-time">Just now</span>
+                                </div>
+                                <div class="nh-why-lead-row">
+                                    <div class="nh-why-lead-avatar" style="background:#8b5cf6;">JO</div>
+                                    <div class="nh-why-lead-body">
+                                        <div class="nh-why-lead-name-row"><span class="nh-why-lead-name">James O.</span></div>
+                                        <div class="nh-why-lead-meta">Search Ads &middot; Consultation</div>
+                                    </div>
+                                    <span class="nh-why-lead-time">3m ago</span>
+                                </div>
+                                <div class="nh-why-lead-row">
+                                    <div class="nh-why-lead-avatar" style="background:#06b6d4;">PK</div>
+                                    <div class="nh-why-lead-body">
+                                        <div class="nh-why-lead-name-row"><span class="nh-why-lead-name">Priya K.</span></div>
+                                        <div class="nh-why-lead-meta">Landing Page &middot; Pricing</div>
+                                    </div>
+                                    <span class="nh-why-lead-time">9m ago</span>
+                                </div>
+                                <div class="nh-why-lead-row">
+                                    <div class="nh-why-lead-avatar" style="background:#6366f1;">DM</div>
+                                    <div class="nh-why-lead-body">
+                                        <div class="nh-why-lead-name-row"><span class="nh-why-lead-name">Daniel M.</span></div>
+                                        <div class="nh-why-lead-meta">Referral &middot; Callback</div>
+                                    </div>
+                                    <span class="nh-why-lead-time">17m ago</span>
+                                </div>
+                                <div class="nh-why-lead-row">
+                                    <div class="nh-why-lead-avatar" style="background:#ec4899;">CB</div>
+                                    <div class="nh-why-lead-body">
+                                        <div class="nh-why-lead-name-row"><span class="nh-why-lead-name">Chloe B.</span></div>
+                                        <div class="nh-why-lead-meta">Paid Social &middot; Quote guide</div>
+                                    </div>
+                                    <span class="nh-why-lead-time">24m ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nh-why-phone-home"></div>
+                    </div>
+                </div>
+
+                <div class="nh-why-col">
+                    <div class="nh-why-card fade-up">
+                        <div class="nh-why-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="16" rx="1"/><path d="m9.5 12 2 2 4-4"/></svg>
+                        </div>
+                        <h3>Approved before you pay</h3>
+                        <p>A Campaign Approval Document shows exactly what we're running before a penny of spend.</p>
+                    </div>
+                    <div class="nh-why-card fade-up">
+                        <div class="nh-why-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </div>
+                        <h3>Direct line to the team</h3>
+                        <p>WhatsApp access to the people running your campaigns — no support tickets.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- How It Works -->
-<section id="how-it-works">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">HOW IT WORKS</span>
-            <h2 class="section-title">Our Approach to Generating <span class="gradient-text">Qualified Leads</span></h2>
-            <p class="section-subtitle">A proven 5-step system to deliver high-quality, exclusive leads straight to your pipeline.</p>
+<section class="nh-section" id="how-it-works">
+    <div class="nh-wrap">
+        <div class="nh-how-head fade-up">
+            <span class="nh-eyebrow"><span class="nh-dot"></span>How it works</span>
+            <h2 style="margin-top:0.75rem;">From call to live campaign in 5 days</h2>
+            <p class="nh-lede" style="margin:0.9rem auto 0;">No lengthy onboarding, no waiting around for a strategy deck. Here's exactly what happens after you book the call.</p>
         </div>
-        <div class="steps-grid">
-            <div class="step-card fade-up">
-                <div class="step-number">1</div>
-                <h3>Multiple Traffic Sources</h3>
-                <p>We run campaigns across Google Ads, Meta, LinkedIn and more, diversified and tailored to your sector for maximum reach.</p>
-            </div>
-            <div class="step-card fade-up">
-                <div class="step-number">2</div>
-                <h3>Tailored Landing Pages</h3>
-                <p>Custom-built pages designed for your brand that convert visitors into leads at the highest possible rate.</p>
-            </div>
-            <div class="step-card fade-up">
-                <div class="step-number">3</div>
-                <h3>Advanced Lead Qualification</h3>
-                <p>Targeted qualifying questions filter out low-quality prospects, so you only speak with people ready to buy.</p>
-            </div>
-            <div class="step-card fade-up">
-                <div class="step-number">4</div>
-                <h3>Real-Time Lead Delivery</h3>
-                <p>Leads appear instantly in your dashboard with email and SMS notifications, no delays, no missed opportunities.</p>
-            </div>
-            <div class="step-card fade-up">
-                <div class="step-number">5</div>
-                <h3>Continuous Optimisation</h3>
-                <p>Ongoing A/B testing, tracking, and strategic scaling to improve your results month after month.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Stats -->
-<section id="stats">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="20">0</div>
-                <div class="stat-label">Sectors Served</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="10">0</div>
-                <div class="stat-label">Years in Lead Generation</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="100" data-suffix="%">0</div>
-                <div class="stat-label">Platform Uptime</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Onboarding Timeline -->
-<section id="onboarding">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">GETTING STARTED</span>
-            <h2 class="section-title">Your Complete <span class="gradient-text">5-Step Onboarding</span></h2>
-            <p class="section-subtitle">Here's exactly what happens after your call, from strategy to leads in as little as 7 working days.</p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-step fade-up">
-                <div class="timeline-num">1</div>
-                <div class="timeline-content">
-                    <span class="timeline-when">20-min call</span>
-                    <h3>Book Your Discovery Call</h3>
-                    <p>A quick 20-minute call to understand your business, your goals, and whether we're the right fit. No pressure, no hard sell, just a straight answer. If we're aligned, we get you onboarded immediately.</p>
+        <div class="nh-how-grid-single">
+            <div class="nh-timeline">
+                <div class="nh-tl-step fade-up">
+                    <div class="nh-tl-num">1</div>
+                    <div>
+                        <h3>20-minute discovery call</h3>
+                        <p>A straight conversation about your business, your current lead flow, and whether we're a fit — no hard sell.</p>
+                    </div>
+                </div>
+                <div class="nh-tl-step fade-up">
+                    <div class="nh-tl-num">2</div>
+                    <div>
+                        <h3>Instant platform access</h3>
+                        <p>As soon as you're onboarded, you're into your dashboard — no waiting weeks for "setup" to finish.</p>
+                    </div>
+                </div>
+                <div class="nh-tl-step fade-up">
+                    <div class="nh-tl-num">3</div>
+                    <div>
+                        <h3>A direct line to the team</h3>
+                        <p>WhatsApp access straight to the founders and your project team. No support tickets, no call centres.</p>
+                    </div>
+                </div>
+                <div class="nh-tl-step fade-up">
+                    <div class="nh-tl-num">4</div>
+                    <div>
+                        <h3>Days 1–3: research &amp; strategy</h3>
+                        <p>We build your Campaign Approval Document — full strategy and creative direction — for your sign-off before a penny is spent.</p>
+                    </div>
+                </div>
+                <div class="nh-tl-step fade-up">
+                    <div class="nh-tl-num">5</div>
+                    <div>
+                        <h3>Day 5+: live and generating leads</h3>
+                        <p>Campaigns go live, leads start flowing into your dashboard, and we optimise and scale from there. Results are guaranteed within 14 days.</p>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-step fade-up">
-                <div class="timeline-num">2</div>
-                <div class="timeline-content">
-                    <span class="timeline-when">Within minutes</span>
-                    <h3>Instant Platform Access</h3>
-                    <p>You'll receive login details to your UpScale platform straight after onboarding, your command center for every lead, every campaign, every conversation in one place.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-up">
-                <div class="timeline-num">3</div>
-                <div class="timeline-content">
-                    <span class="timeline-when">Same day</span>
-                    <h3>Direct Line to the Team</h3>
-                    <p>You'll be added to a private WhatsApp group with Lewis and Sofia, the founders. No middlemen, no support tickets. Direct access to the people running your campaigns.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-up">
-                <div class="timeline-num">4</div>
-                <div class="timeline-content">
-                    <span class="timeline-when">Days 1-3</span>
-                    <h3>Deep-Dive Research &amp; Strategy</h3>
-                    <p>Competitor analysis and market research specific to your industry and area. You receive a Campaign Approval Document with full visibility on every decision, ad copy, creative concepts, targeting and budget, before a single penny is spent.</p>
-                    <p class="timeline-callout">&uarr; Full input and clarity on exactly what's happening with your campaigns.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-up">
-                <div class="timeline-num">5</div>
-                <div class="timeline-content">
-                    <span class="timeline-when">Day 5+</span>
-                    <h3>We Go Live &amp; Scale</h3>
-                    <p>Once you approve, we launch. Leads start flowing in as early as day 1 of ads going live. We monitor daily, testing, tweaking, optimising. Your job? Just close the leads we send. We don't "set it and forget it". We constantly improve your cost-per-lead and scale what works.</p>
-                </div>
-            </div>
-        </div>
-        <div class="fade-up">
-            <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="cta-btn">Book My FREE Discovery Call &rarr;</a>
         </div>
     </div>
 </section>
 
 <!-- Team -->
-<section id="team" style="background: var(--dark-surface);">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">MEET THE TEAM</span>
-            <h2 class="section-title">The People Behind <span class="gradient-text">Your Growth</span></h2>
-            <p class="section-subtitle">Driven by results, obsessed with keeping your pipeline full.</p>
+<section class="nh-team-band nh-section">
+    <div class="nh-wrap">
+        <div class="nh-section-head fade-up">
+            <span class="nh-eyebrow"><span class="nh-dot"></span>Meet the team</span>
+            <h2 style="margin-top:0.75rem;">The people behind your growth</h2>
+            <p class="nh-lede">Driven by results, obsessed with keeping your pipeline full.</p>
         </div>
-        <div class="team-grid founders-grid">
-            <div class="team-member fade-up">
-                <div class="team-photo">
-                    <img src="/assets/team/lewis.webp" alt="Lewis, Co-Founder" loading="lazy">
+
+        <div class="nh-team-photo-grid fade-up">
+            <div class="nh-team-photo-member">
+                <div class="nh-team-photo-ring">
+                    <div class="nh-team-photo-inner"><img src="/assets/team/lewis.webp" alt="Lewis, Co-Founder" loading="lazy"></div>
                 </div>
-                <h3>Lewis</h3>
-                <p>Co-Founder</p>
+                <div class="nh-team-photo-name">Lewis</div>
+                <div class="nh-team-photo-role">Co-Founder</div>
             </div>
-            <div class="team-member fade-up">
-                <div class="team-photo">
-                    <img src="/assets/team/sofia.webp" alt="Sofia, Co-Founder" loading="lazy">
+            <div class="nh-team-photo-member">
+                <div class="nh-team-photo-ring">
+                    <div class="nh-team-photo-inner"><img src="/assets/team/sofia.webp" alt="Sofia, Co-Founder" loading="lazy"></div>
                 </div>
-                <h3>Sofia</h3>
-                <p>Co-Founder</p>
+                <div class="nh-team-photo-name">Sofia</div>
+                <div class="nh-team-photo-role">Co-Founder</div>
             </div>
-            <div class="team-member fade-up">
-                <div class="team-photo">
-                    <img src="/assets/team/nikolas.webp" alt="Nikolas Picard, Head of Marketing" loading="lazy">
+            <div class="nh-team-photo-member">
+                <div class="nh-team-photo-ring">
+                    <div class="nh-team-photo-inner"><img src="/assets/team/nikolas.webp" alt="Nikolas, Head of Marketing" loading="lazy"></div>
                 </div>
-                <h3>Nikolas</h3>
-                <p>Head of Marketing</p>
+                <div class="nh-team-photo-name">Nikolas</div>
+                <div class="nh-team-photo-role">Head of Marketing</div>
             </div>
-            <div class="team-member fade-up">
-                <div class="team-photo">
-                    <img src="/assets/team/fabian.webp" alt="Fabian, Project Lead" loading="lazy">
+            <div class="nh-team-photo-member">
+                <div class="nh-team-photo-ring">
+                    <div class="nh-team-photo-inner"><img src="/assets/team/fabian.webp" alt="Fabian, Project Lead" loading="lazy"></div>
                 </div>
-                <h3>Fabian</h3>
-                <p>Project Lead</p>
+                <div class="nh-team-photo-name">Fabian</div>
+                <div class="nh-team-photo-role">Project Lead</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">FAQ</span>
-            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+<!-- Proof / Case studies -->
+<section class="nh-section" id="proof" style="background:var(--nh-surface);border-top:1px solid var(--nh-border);border-bottom:1px solid var(--nh-border);">
+    <div class="nh-wrap">
+        <div class="nh-section-head fade-up">
+            <span class="nh-eyebrow"><span class="nh-dot"></span>Proof, not promises</span>
+            <h2 style="margin-top:0.75rem;">Results across the industries we work in</h2>
+            <p class="nh-lede">Approved results from live UpScale client campaigns — matched to the industries closest to your own.</p>
         </div>
-        <div class="faq-list fade-up">
-            <div class="faq-item">
-                <button class="faq-question">Why work with UpScale?</button>
-                <div class="faq-answer">
-                    <p>We combine multi-channel traffic expertise with custom landing pages and advanced qualification to deliver exclusive, high-quality leads. Unlike other agencies, your leads are never shared with competitors.</p>
+
+        <div class="nh-case-grid fade-up">
+            <a class="nh-case-card" href="/case-studies/northern-motor">
+                <img src="https://images.unsplash.com/photo-1585540033955-a8e0040b3d96?auto=format&fit=crop&w=900&q=80" alt="Car dealership forecourt" loading="lazy">
+                <div>
+                    <span class="nh-tag">Automotive</span>
+                    <h3>Northern Motor Group</h3>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How do you qualify leads?</button>
-                <div class="faq-answer">
-                    <p>We build tailored qualification forms with targeted questions specific to your sector. This filters out tyre-kickers and ensures you only receive leads with genuine buying intent.</p>
+                <p class="nh-result">Record monthly van sales.</p>
+            </a>
+            <a class="nh-case-card" href="/case-studies/tractor-kings">
+                <img src="https://images.unsplash.com/photo-1761839257961-4dce65b72d99?auto=format&fit=crop&w=900&q=80" alt="Tractor harvesting crops in a field" loading="lazy">
+                <div>
+                    <span class="nh-tag">E-commerce &middot; Agriculture</span>
+                    <h3>Tractor Kings</h3>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Which sectors do you work with?</button>
-                <div class="faq-answer">
-                    <p>We work across 50+ sectors including professional services, home improvement, healthcare, finance, education, and more. Our approach is customised for each industry's unique requirements.</p>
+                <p class="nh-result">Growth in online sales and buyer enquiries.</p>
+            </a>
+            <a class="nh-case-card" href="/case-studies/rental-claims">
+                <img src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?auto=format&fit=crop&w=900&q=80" alt="Business contract being signed at a desk" loading="lazy">
+                <div>
+                    <span class="nh-tag">Legal services</span>
+                    <h3>Rental Deposit Claim Specialists</h3>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">What level of support do you provide?</button>
-                <div class="faq-answer">
-                    <p>Every client gets a dedicated account manager. You'll have direct access for questions, strategy discussions, and campaign updates, no support tickets or chatbots.</p>
+                <p class="nh-result">20% lead-to-client conversion rate.</p>
+            </a>
+            <a class="nh-case-card" href="/case-studies/fab-clinic">
+                <img src="https://plus.unsplash.com/premium_photo-1682130157004-057c137d96d5?auto=format&fit=crop&w=900&q=80" alt="Medical clinic waiting room and reception" loading="lazy">
+                <div>
+                    <span class="nh-tag">Healthcare</span>
+                    <h3>Fab Clinic</h3>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How quickly will I see results?</button>
-                <div class="faq-answer">
-                    <p>Most clients start receiving leads within the first week of campaign launch. We continuously optimise from day one to improve quality and volume over time.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">What involvement is required from me?</button>
-                <div class="faq-answer">
-                    <p>Minimal. After an initial onboarding call to understand your business, we handle everything. You just need to follow up with the leads we deliver and provide feedback through our platform.</p>
-                </div>
-            </div>
+                <p class="nh-result">Consistent new monthly consumer enquiries.</p>
+            </a>
+        </div>
+        <p class="nh-disclaimer">Results shown are from UpScale client campaigns across the UK.</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="nh-section" id="faq">
+    <div class="nh-wrap">
+        <div class="nh-section-head fade-up">
+            <span class="nh-eyebrow"><span class="nh-dot"></span>Before you ask</span>
+            <h2 style="margin-top:0.75rem;">The questions every owner-operator asks</h2>
+        </div>
+
+        <div class="nh-faq fade-up">
+            <details open>
+                <summary>I've tried ads or agencies before and it didn't work.<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Most bad experiences come from black-box agencies with zero visibility. Every campaign starts with a Campaign Approval Document before spend, plus weekly reporting and a live dashboard — and your leads are exclusive, never shared with competitors.</p>
+            </details>
+            <details>
+                <summary>How is this different from a freelancer or a cheap agency?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>You get a marketing director (10 years' experience) and a project manager (15 years' experience) — a five-person team, not one generalist juggling ten other clients. Strategy, creative, landing pages, lead qualification, and follow-up are all handled.</p>
+            </details>
+            <details>
+                <summary>I don't have time to deal with an agency.<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>That's exactly what this removes. A 20-minute discovery call, instant platform access, and a direct WhatsApp line — no lengthy onboarding, no micromanaging required.</p>
+            </details>
+            <details>
+                <summary>What if the leads are bad quality?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Leads are exclusive and delivered in real time, with lead-quality feedback built into the dashboard — and results are guaranteed within 14 days of going live.</p>
+            </details>
+            <details>
+                <summary>How fast can this actually start?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Live with ads in 5 days. Days 1–3 cover research, strategy, and sign-off on your Campaign Approval Document; from day 5 you're live and leads start flowing.</p>
+            </details>
         </div>
     </div>
 </section>
@@ -1478,7 +1626,7 @@
             <div class="contact-info">
                 <div class="contact-info-block">
                     <div class="contact-info-block-label">Book a discovery call</div>
-                    <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 4px;">Book a Discovery Call</a>
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1sJpXKtr1jm802a2EMK597RTryEQaD0jJoI9iWE8EeyaUkzfrWXfEAqWDOs5LT7fXthfNcO2AZ" target="_blank" rel="noopener" class="cta-btn" style="margin-top: 4px;">Book a Discovery Call</a>
                 </div>
                 <div class="contact-info-block">
                     <div class="contact-info-block-label">Office hours</div>
@@ -1538,7 +1686,7 @@
                 <a href="/case-studies">Case Studies</a>
                 <a href="/blog">Blog</a>
                 <a href="/contact">Contact</a>
-                <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener">Book a Call</a>
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1sJpXKtr1jm802a2EMK597RTryEQaD0jJoI9iWE8EeyaUkzfrWXfEAqWDOs5LT7fXthfNcO2AZ" target="_blank" rel="noopener">Book a Call</a>
             </div>
             <div class="footer-col">
                 <h4>Office</h4>
@@ -1596,6 +1744,75 @@
 
     document.querySelectorAll('.stat-number[data-target]').forEach(el => statObserver.observe(el));
 
+    // Hero lead inbox: simulated live-arriving leads
+    (function () {
+        const list = document.getElementById('leadList');
+        const countEl = document.getElementById('leadCount');
+        if (!list) return;
+        const pool = [
+            { name: 'Chloe B.', initials: 'CB', channel: 'Paid Social', color: '#d946ef', enquiry: 'Downloaded a quote guide' },
+            { name: 'Marcus A.', initials: 'MA', channel: 'Search Ads', color: '#8b5cf6', enquiry: 'Enquired about availability' },
+            { name: 'Emily R.', initials: 'ER', channel: 'Landing Page', color: '#06b6d4', enquiry: 'Requested a site visit' },
+            { name: 'Tom H.', initials: 'TH', channel: 'Referral', color: '#6366f1', enquiry: 'Asked for a quote comparison' },
+            { name: 'Aisha K.', initials: 'AK', channel: 'Paid Social', color: '#d946ef', enquiry: 'Requested a free quote' },
+            { name: 'Ryan F.', initials: 'RF', channel: 'Search Ads', color: '#8b5cf6', enquiry: 'Booked a consultation' }
+        ];
+        const maxVisible = 4;
+        let count = 4;
+        let lastIndex = -1;
+
+        function relabel() {
+            const labels = ['Just now', '3m ago', '9m ago', '17m ago'];
+            const cards = list.querySelectorAll('.lead-card');
+            cards.forEach((card, i) => {
+                const t = card.querySelector('.lead-time');
+                if (t && labels[i]) t.textContent = labels[i];
+                const row = card.querySelector('.lead-name-row');
+                const existingDot = row.querySelector('.lead-unread-dot');
+                if (i === 0 && !existingDot) {
+                    const dot = document.createElement('span');
+                    dot.className = 'lead-unread-dot';
+                    row.appendChild(dot);
+                } else if (i !== 0 && existingDot) {
+                    existingDot.remove();
+                }
+            });
+        }
+
+        function addLead() {
+            let idx;
+            do { idx = Math.floor(Math.random() * pool.length); } while (idx === lastIndex);
+            lastIndex = idx;
+            const lead = pool[idx];
+
+            const card = document.createElement('div');
+            card.className = 'lead-card lead-card-enter';
+            card.innerHTML =
+                `<div class="lead-avatar" style="background:${lead.color};">${lead.initials}</div>` +
+                `<div class="lead-body">` +
+                    `<div class="lead-name-row"><span class="lead-name">${lead.name}</span></div>` +
+                    `<div class="lead-meta"><span class="lead-channel">${lead.channel}</span> &middot; ${lead.enquiry}</div>` +
+                `</div>` +
+                `<div class="lead-time">Just now</div>`;
+            list.insertBefore(card, list.firstChild);
+            requestAnimationFrame(() => requestAnimationFrame(() => card.classList.remove('lead-card-enter')));
+
+            const cards = list.querySelectorAll('.lead-card');
+            if (cards.length > maxVisible) {
+                const last = cards[cards.length - 1];
+                last.classList.add('lead-card-exit');
+                setTimeout(() => last.remove(), 450);
+            }
+
+            count++;
+            if (countEl) countEl.textContent = count + ' new today';
+            relabel();
+        }
+
+        relabel();
+        setInterval(addLead, 4800);
+    })();
+
     // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1639,7 +1856,7 @@
         <a href="/about">About</a>
     <a href="/contact">Contact</a>
     </div>
-    <a href="https://calendar.app.google/oU9yiVgYQPWJFqdW9" target="_blank" rel="noopener" class="mobile-nav-cta">Book a Discovery Call</a>
+    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1sJpXKtr1jm802a2EMK597RTryEQaD0jJoI9iWE8EeyaUkzfrWXfEAqWDOs5LT7fXthfNcO2AZ" target="_blank" rel="noopener" class="mobile-nav-cta">Book a Discovery Call</a>
 </aside>
 
 <script src="/cookie-banner.js" defer></script>
