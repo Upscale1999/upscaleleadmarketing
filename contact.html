@@ -760,19 +760,17 @@
 
                 <form id="contact-form"
                       class="contact-form"
-                      action="https://formsubmit.co/hello@upscaleleadmarketing.co.uk"
+                      action="https://formspree.io/f/mzdnzdjj"
                       method="POST">
 
-                    <!-- FormSubmit config -->
+                    <!-- Formspree config -->
                     <input type="hidden" name="_subject" value="New enquiry via upscaleleadmarketing.co.uk">
                     <input type="hidden" name="_next" value="https://upscaleleadmarketing.co.uk/contact?sent=1">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
 
-                    <!-- Honeypot, real visitors won't fill this -->
+                    <!-- Honeypot (Formspree uses _gotcha) -->
                     <div class="form-honeypot" aria-hidden="true">
                         <label for="company-website">Leave this field blank</label>
-                        <input type="text" id="company-website" name="_honey" tabindex="-1" autocomplete="off">
+                        <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off">
                     </div>
 
                     <div class="form-row two-col">
