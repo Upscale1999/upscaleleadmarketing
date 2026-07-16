@@ -1015,6 +1015,68 @@
         .coming-card h3 { color: var(--nh-ink) !important; }
         .coming-card .soon-label { color: var(--nh-ink-soft) !important; }
 
+    
+        /* --- Homepage nh-* design tokens (added for stats + faq redesign) --- */
+        .nh-wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+        .nh-eyebrow {
+          display: inline-flex; align-items: center; gap: 0.5rem;
+          font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; color: var(--pink);
+        }
+        .nh-eyebrow .nh-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gradient); }
+        .nh-lede { font-size: 1.05rem; line-height: 1.6; color: var(--nh-ink-soft); max-width: 52ch; }
+        .nh-grad-text {
+          background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 55%, #06b6d4 100%);
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .nh-section { padding: 88px 0; background: var(--nh-surface) !important; }
+        .nh-section-head { max-width: 640px; margin-bottom: 3rem; }
+        .nh-section-head h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin: 0; color: var(--nh-ink) !important; }
+        @media (min-width: 768px) { .nh-section-head h2 { font-size: 2.5rem; } }
+        .nh-section-head .nh-lede { margin-top: 0.9rem; }
+
+        /* Stat bento */
+        .nh-stat-band { padding: 56px 0; border-bottom: 1px solid var(--nh-border); background: var(--nh-surface) !important; }
+        .nh-stat-bento-wrap { max-width: 960px; margin: 0 auto; }
+        .nh-stat-bento { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+        @media (min-width: 640px) { .nh-stat-bento { grid-template-columns: repeat(3, 1fr); } }
+        .nh-stat-card {
+          background: var(--nh-surface) !important;
+          border: 1px solid var(--nh-border) !important;
+          border-radius: 1.5rem;
+          padding: 1.75rem;
+          box-shadow: 0 14px 32px -12px rgba(23,19,27,0.18), 0 4px 10px -4px rgba(23,19,27,0.08) !important;
+          transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s cubic-bezier(0.16,1,0.3,1);
+        }
+        .nh-stat-card:hover { transform: translateY(-3px); box-shadow: 0 18px 38px -12px rgba(23,19,27,0.22), 0 6px 14px -4px rgba(23,19,27,0.1) !important; }
+        .nh-stat-num { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--nh-ink); }
+        .nh-stat-label { font-size: 0.88rem; color: var(--nh-ink-soft) !important; margin-top: 0.35rem; }
+
+        /* FAQ */
+        .nh-faq { max-width: 760px; display: flex; flex-direction: column; gap: 1rem; }
+        .nh-faq details {
+          border: 1px solid var(--nh-border);
+          border-radius: 1.5rem;
+          padding: 1.4rem 1.6rem;
+          background: var(--nh-surface) !important;
+          box-shadow: 0 24px 48px -22px rgba(217,70,239,0.16), 0 8px 20px -14px rgba(23,19,27,0.08);
+          transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+        }
+        .nh-faq details[open] { transform: translateY(-2px); }
+        .nh-faq details summary {
+          list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+          font-weight: 600; font-size: 1.02rem; color: var(--nh-ink) !important;
+        }
+        .nh-faq details summary::-webkit-details-marker { display: none; }
+        .nh-faq-plus {
+          width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 1px solid var(--nh-border); flex-shrink: 0;
+          display: flex; align-items: center; justify-content: center;
+          transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), background 0.35s cubic-bezier(0.16,1,0.3,1);
+          color: var(--nh-ink);
+        }
+        .nh-faq details[open] .nh-faq-plus { transform: rotate(45deg); background: var(--gradient); border-color: transparent; color: #fff; }
+        .nh-faq-plus svg { width: 14px; height: 14px; }
+        .nh-faq details p { color: var(--nh-ink-soft) !important; font-size: 0.95rem; line-height: 1.65; margin-top: 0.9rem; max-width: 62ch; }
+
     </style>
 </head>
 <body>
@@ -1071,64 +1133,6 @@
     </div>
 </section>
 
-<!-- What's Included -->
-<section id="included">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">WHAT'S INCLUDED</span>
-            <h2 class="section-title">Everything you need to <span class="gradient-text">scale B2B outreach</span></h2>
-            <p class="section-subtitle">A complete cold outreach engine, we handle the infrastructure, the copy, the sending, the replies, the reporting. You just take the calls.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-                <h3>AI Audience Targeting</h3>
-                <p>We use AI to scrape, enrich and verify thousands of decision makers that match your ideal customer profile, job title, company size, industry, location, tech stack.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <h3>Domain &amp; Mailbox Infrastructure</h3>
-                <p>We register dedicated sending domains, provision inboxes, and configure SPF, DKIM and DMARC properly, your main domain is never put at risk.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg></div>
-                <h3>Slow Mailbox Warmup</h3>
-                <p>Every inbox is slowly warmed using our automated warming network to build sender reputation before a single prospect is contacted. Skipping this step kills deliverability, we never do.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-                <h3>AI Personalised Copy</h3>
-                <p>Every email is personalised at scale using AI, opening line, pain point and CTA tailored to each prospect's company, role and recent activity. Plain text. Personal. High reply rates.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                <h3>Multistep Sequences</h3>
-                <p>4 to 6 step email sequences with smart follow up timing, so cold prospects warm up over weeks, not days. Most of your replies come from follow ups 3 and 4.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-                <h3>LinkedIn Automation</h3>
-                <p>Paired LinkedIn outreach running in parallel, connection requests, follow ups and InMails, so prospects see you across two channels and reply rates compound.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                <h3>Reply Management &amp; Booking</h3>
-                <p>We read, qualify and respond to every reply, positive, negative, "not now" or "send me info", and book qualified prospects straight into your calendar.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
-                <h3>Realtime Reporting</h3>
-                <p>Live dashboard: emails sent, opens, replies, meetings booked, deliverability, and which sequences are winning, so we can double down on what works.</p>
-            </div>
-            <div class="feature-card fade-up">
-                <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-                <h3>Secure, Responsible Outreach</h3>
-                <p>All campaigns target B2B decision makers only, honour opt outs instantly, and maintain full compliance documentation. Your data, your reputation and your prospects' information all stay safe.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Why this works -->
 <section id="why">
     <div class="container text-center">
@@ -1163,28 +1167,24 @@
 </section>
 
 <!-- Stats -->
-<section id="stats">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="16000">0</div>
-                <div class="stat-label">Emails sent / month per campaign</div>
+<div class="nh-stat-band" id="stats">
+    <div class="nh-wrap nh-stat-bento-wrap">
+        <div class="nh-stat-bento">
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="23847" data-suffix="">0</span></div>
+                <div class="nh-stat-label">B2B decision-makers reached YTD</div>
             </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="2">0</div>
-                <div class="stat-label">Channels (Email + LinkedIn)</div>
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="63" data-suffix="">0</span></div>
+                <div class="nh-stat-label">qualified meetings booked YTD</div>
             </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="8">0</div>
-                <div class="stat-label">Weeks to first booked meetings</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number gradient-text" data-target="100">0</div>
-                <div class="stat-label">% Done for you</div>
+            <div class="nh-stat-card fade-up">
+                <div class="nh-stat-num nh-grad-text"><span class="stat-number" data-target="8" data-suffix=" weeks">0</span></div>
+                <div class="nh-stat-label">average from setup to first booked meeting</div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- Process Timeline -->
 <section id="process">
@@ -1243,55 +1243,42 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq">
-    <div class="container text-center">
-        <div class="fade-up">
-            <span class="section-label">FAQ</span>
-            <h2 class="section-title">Common <span class="gradient-text">Questions</span></h2>
+<section class="nh-section" id="faq">
+    <div class="nh-wrap">
+        <div class="nh-section-head fade-up" style="margin-left:auto;margin-right:auto;text-align:center;">
+            <span class="nh-eyebrow" style="justify-content:center;"><span class="nh-dot"></span>Before you ask</span>
+            <h2 style="margin-top:0.75rem;">Common questions</h2>
         </div>
-        <div class="faq-list fade-up">
-            <div class="faq-item">
-                <button class="faq-question">Is this just cold email spam?</button>
-                <div class="faq-answer">
-                    <p>No. We send personalised, plain text emails at controlled volume from warmed mailboxes, targeting B2B decision makers with messages relevant to their role. Every prospect can opt out in one click. This is the opposite of spam, it's how the best modern sales teams prospect.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Will this affect my main domain or company email?</button>
-                <div class="faq-answer">
-                    <p>Never. We register and use dedicated sending domains (often lookalikes of your main domain) and provision separate mailboxes specifically for outreach. Your main domain and existing email reputation stay completely untouched.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How long until I see results?</button>
-                <div class="faq-answer">
-                    <p>Realistically, 6 to 8 weeks from kick off. Two to three of those weeks are warmup, non negotiable for deliverability. From week 4 you'll start seeing replies; meetings typically begin booking from week 6 to 8. Real pipeline impact is at 8 to 12 weeks once we've iterated on copy and scaled what works.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">What happens when prospects reply?</button>
-                <div class="faq-answer">
-                    <p>We handle every reply for you. Positive replies get qualified and booked straight into your calendar. "Not now" replies go into a nurture sequence. Negative replies are removed. You only ever see the booked meetings, we deal with everything in between.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How do you handle data and compliance?</button>
-                <div class="faq-answer">
-                    <p>Securely. Outreach is targeted at B2B decision makers only, opt outs are honoured immediately, we document compliance throughout, and we never target consumers. Your prospect data and our processes are handled to a professional standard, and full documentation is available on request.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Can you target my specific industry?</button>
-                <div class="faq-answer">
-                    <p>If we can build a list of decision makers in your target market, we can run a campaign. We work across SaaS, professional services, agencies, recruitment, finance, manufacturing, healthcare, and more. On the discovery call we'll tell you straight whether we're a fit for your niche.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Do I have to sign a long contract?</button>
-                <div class="faq-answer">
-                    <p>We typically work on a 3 month minimum to give campaigns time to warm up and prove out, cold outreach won't work on a 30 day window. After that you're month to month. We'd rather earn the renewal than lock you in.</p>
-                </div>
-            </div>
+
+        <div class="nh-faq fade-up" style="margin-left:auto;margin-right:auto;">
+            <details open>
+                <summary>Is this just cold email spam?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>No. We send personalised, plain text emails at controlled volume from warmed mailboxes, targeting B2B decision makers with messages relevant to their role. Every prospect can opt out in one click. This is the opposite of spam, it's how the best modern sales teams prospect.</p>
+            </details>
+            <details>
+                <summary>Will this affect my main domain or company email?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Never. We register and use dedicated sending domains (often lookalikes of your main domain) and provision separate mailboxes specifically for outreach. Your main domain and existing email reputation stay completely untouched.</p>
+            </details>
+            <details>
+                <summary>How long until I see results?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Realistically, 6 to 8 weeks from kick off. Two to three of those weeks are warmup, non negotiable for deliverability. From week 4 you'll start seeing replies; meetings typically begin booking from week 6 to 8. Real pipeline impact is at 8 to 12 weeks once we've iterated on copy and scaled what works.</p>
+            </details>
+            <details>
+                <summary>What happens when prospects reply?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>We handle every reply for you. Positive replies get qualified and booked straight into your calendar. "Not now" replies go into a nurture sequence. Negative replies are removed. You only ever see the booked meetings, we deal with everything in between.</p>
+            </details>
+            <details>
+                <summary>How do you handle data and compliance?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>Securely. Outreach is targeted at B2B decision makers only, opt outs are honoured immediately, we document compliance throughout, and we never target consumers. Your prospect data and our processes are handled to a professional standard, and full documentation is available on request.</p>
+            </details>
+            <details>
+                <summary>Can you target my specific industry?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>If we can build a list of decision makers in your target market, we can run a campaign. We work across SaaS, professional services, agencies, recruitment, finance, manufacturing, healthcare, and more. On the discovery call we'll tell you straight whether we're a fit for your niche.</p>
+            </details>
+            <details>
+                <summary>Do I have to sign a long contract?<span class="nh-faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                <p>We typically work on a 3 month minimum to give campaigns time to warm up and prove out, cold outreach won't work on a 30 day window. After that you're month to month. We'd rather earn the renewal than lock you in.</p>
+            </details>
         </div>
     </div>
 </section>
@@ -1414,7 +1401,7 @@
                         current = target;
                         clearInterval(timer);
                     }
-                    el.textContent = current.toLocaleString() + (target >= 100 ? '+' : '');
+                    el.textContent = current.toLocaleString('en-GB') + (el.dataset.suffix !== undefined ? el.dataset.suffix : (target >= 100 ? '+' : ''));
                 }, 30);
                 statObserver.unobserve(el);
             }
