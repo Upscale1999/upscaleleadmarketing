@@ -1223,8 +1223,45 @@
         @media (max-width: 480px) {
             .nh-review-card { width: 300px; padding: 1.4rem 1.5rem; }
         }
+        .nh-review-card-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.1rem;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .nh-review-card-stars {
+            color: #fbbc04;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        .nh-verified-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(52, 168, 83, 0.09);
+            color: #1e7c3a;
+            border: 1px solid rgba(52, 168, 83, 0.28);
+            padding: 0.28rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .nh-verified-pill svg { width: 11px; height: 11px; flex-shrink: 0; }
+        .nh-review-quote {
+            color: var(--nh-ink);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .nh-review-quote::before { content: "\201C"; color: var(--pink); font-size: 1.4rem; font-family: Georgia, serif; margin-right: 0.15rem; line-height: 0; }
 
-                .nh-review-attribution {
+        .nh-review-attribution {
             display: flex;
             align-items: center;
             gap: 0.85rem;
