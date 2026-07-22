@@ -1540,6 +1540,102 @@
             flex-shrink: 0;
         }
 
+    
+        /* --- CRM section mobile improvements --- */
+        @media (max-width: 720px) {
+            .nh-crm-band { padding: 60px 0 72px; }
+            .nh-crm-grid { gap: 2.5rem; }
+            .nh-crm-band .nh-section-head h2 { font-size: 1.75rem; }
+            .nh-crm-band .nh-lede { font-size: 0.98rem; }
+
+            /* Feature cards a touch more compact on mobile */
+            .nh-crm-features { gap: 0.75rem; }
+            .nh-crm-card-feature {
+                grid-template-columns: 2.5rem 1fr;
+                gap: 0.85rem;
+                padding: 1rem 1.15rem;
+                border-radius: 1.1rem;
+            }
+            .nh-crm-feat-tile {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 0.65rem;
+            }
+            .nh-crm-feat-tile svg { width: 17px; height: 17px; }
+            .nh-crm-card-feature h3 { font-size: 0.98rem; margin-bottom: 0.25rem; }
+            .nh-crm-card-feature p { font-size: 0.86rem; line-height: 1.5; }
+        }
+
+        @media (max-width: 620px) {
+            /* Trim the browser chrome */
+            .nh-crm-mockup { border-radius: 1rem; box-shadow: 0 18px 40px -22px rgba(23,19,27,0.28), 0 8px 18px -12px rgba(217,70,239,0.14); }
+            .nh-crm-browser { padding: 0.55rem 0.7rem; gap: 0.4rem; }
+            .nh-crm-browser-dot { width: 9px; height: 9px; }
+            .nh-crm-browser-url {
+                font-size: 0.6rem;
+                padding: 0.28rem 0.7rem;
+                margin-left: 0.55rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
+
+            /* Compact sidebar (icons-only column) */
+            .nh-crm-app { grid-template-columns: 58px 1fr; min-height: auto; }
+            .nh-crm-sidebar { padding: 0.7rem 0.35rem; }
+            .nh-crm-brand-block {
+                padding: 0.35rem;
+                justify-content: center;
+                margin-bottom: 0.7rem;
+            }
+            .nh-crm-brand-avatar { width: 1.7rem; height: 1.7rem; font-size: 0.7rem; border-radius: 0.5rem; }
+            .nh-crm-nav-item { justify-content: center; padding: 0.55rem 0.3rem; }
+            .nh-crm-nav-item svg { width: 14px; height: 14px; }
+
+            /* Main area + topbar */
+            .nh-crm-main { padding: 0.9rem 0.85rem 1.1rem; overflow: hidden; }
+            .nh-crm-topbar { margin-bottom: 0.75rem; align-items: center; }
+            .nh-crm-topbar-title { font-size: 0.92rem; }
+            .nh-crm-topbar-sub { font-size: 0.65rem; }
+            .nh-crm-add-btn { font-size: 0.65rem; padding: 0.3rem 0.7rem; }
+
+            /* Kanban: swipeable, keeps card sizes readable */
+            .nh-crm-kanban {
+                grid-template-columns: repeat(4, 165px);
+                gap: 0.5rem;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0.35rem;
+                scrollbar-width: none;
+                scroll-snap-type: x mandatory;
+                mask-image: linear-gradient(to right, transparent 0, black 6px, black calc(100% - 30px), transparent 100%);
+                -webkit-mask-image: linear-gradient(to right, transparent 0, black 6px, black calc(100% - 30px), transparent 100%);
+            }
+            .nh-crm-kanban::-webkit-scrollbar { display: none; }
+            .nh-crm-col {
+                scroll-snap-align: start;
+                min-height: 210px;
+                padding: 0.45rem;
+            }
+            .nh-crm-col-head { font-size: 0.65rem; padding: 0.35rem 0.45rem; }
+            .nh-crm-col-count { font-size: 0.62rem; }
+
+            .nh-crm-card { padding: 0.5rem 0.6rem; }
+            .nh-crm-card-name { font-size: 0.72rem; margin-bottom: 0.25rem; }
+            .nh-crm-card-badge { font-size: 0.55rem; padding: 0.12rem 0.45rem; margin-bottom: 0.35rem; }
+            .nh-crm-card-note { font-size: 0.6rem; padding-top: 0.3rem; }
+        }
+
+        @media (max-width: 400px) {
+            /* Very small phones: shave a bit more */
+            .nh-crm-band .nh-section-head h2 { font-size: 1.55rem; }
+            .nh-crm-band .nh-lede { font-size: 0.94rem; }
+            .nh-crm-app { grid-template-columns: 52px 1fr; }
+            .nh-crm-kanban { grid-template-columns: repeat(4, 155px); }
+        }
+
     </style>
 </head>
 <body>
