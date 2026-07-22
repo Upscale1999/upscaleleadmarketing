@@ -1317,6 +1317,219 @@
         }
         .nh-review-link svg { width: 14px; height: 14px; }
 
+    
+        /* CRM section */
+        .nh-crm-band { background: var(--nh-surface); padding: 88px 0 96px; border-top: 1px solid var(--nh-border); border-bottom: 1px solid var(--nh-border); }
+        .nh-crm-band .nh-section-head { text-align: center; margin-left: auto; margin-right: auto; }
+        .nh-crm-band .nh-eyebrow { justify-content: center; }
+        .nh-crm-band .nh-lede { margin-left: auto; margin-right: auto; text-align: center; }
+
+        .nh-crm-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        @media (min-width: 960px) { .nh-crm-grid { grid-template-columns: 0.9fr 1.1fr; gap: 4rem; } }
+
+        .nh-crm-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.4rem; }
+        .nh-crm-feature {
+            display: grid;
+            grid-template-columns: 3.25rem 1fr;
+            gap: 1rem;
+            align-items: start;
+        }
+        .nh-crm-feat-icon {
+            width: 3.25rem; height: 3.25rem; border-radius: 0.9rem;
+            background: linear-gradient(135deg, rgba(217,70,239,0.14), rgba(6,182,212,0.12));
+            border: 1px solid rgba(217,70,239,0.18);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .nh-crm-feat-icon svg { width: 22px; height: 22px; stroke: var(--pink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .nh-crm-feature strong { color: var(--nh-ink); font-size: 1.05rem; font-weight: 700; display: block; margin-bottom: 0.25rem; }
+        .nh-crm-feature p { color: var(--nh-ink-soft); font-size: 0.92rem; line-height: 1.55; margin: 0; }
+
+        /* Mockup — browser chrome + app frame */
+        .nh-crm-mockup {
+            background: var(--nh-surface);
+            border: 1px solid var(--nh-border);
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 30px 60px -30px rgba(23,19,27,0.35), 0 12px 32px -18px rgba(217,70,239,0.15);
+            transform: perspective(1400px) rotateY(-3deg);
+            transform-origin: center center;
+        }
+        @media (max-width: 900px) { .nh-crm-mockup { transform: none; } }
+
+        .nh-crm-browser {
+            display: flex; align-items: center; gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: #f4f2f5;
+            border-bottom: 1px solid var(--nh-border);
+        }
+        .nh-crm-browser-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .nh-crm-browser-dot.r { background: #ff5f57; }
+        .nh-crm-browser-dot.y { background: #febc2e; }
+        .nh-crm-browser-dot.g { background: #28c840; }
+        .nh-crm-browser-url {
+            flex: 1;
+            margin-left: 0.75rem;
+            padding: 0.35rem 0.85rem;
+            background: #ffffff;
+            border: 1px solid #e6e1e8;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            color: var(--nh-ink-soft);
+            font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+        }
+
+        .nh-crm-app {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            min-height: 460px;
+        }
+        @media (max-width: 700px) { .nh-crm-app { grid-template-columns: 90px 1fr; } }
+
+        .nh-crm-sidebar { background: #17131b; color: rgba(255,255,255,0.75); padding: 1rem 0.85rem; }
+        .nh-crm-brand-block {
+            display: flex; align-items: center; gap: 0.6rem;
+            padding: 0.5rem 0.6rem;
+            border-radius: 0.6rem;
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 1rem;
+        }
+        .nh-crm-brand-avatar {
+            width: 2rem; height: 2rem; border-radius: 0.55rem;
+            background: var(--gradient);
+            display: flex; align-items: center; justify-content: center;
+            color: #ffffff; font-weight: 800; font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .nh-crm-brand-name { color: #ffffff; font-weight: 700; font-size: 0.78rem; line-height: 1; }
+        .nh-crm-brand-plan { color: rgba(255,255,255,0.5); font-size: 0.66rem; margin-top: 2px; }
+        @media (max-width: 700px) {
+            .nh-crm-brand-block > div:last-child { display: none; }
+        }
+
+        .nh-crm-search {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 0.55rem;
+            padding: 0.4rem 0.6rem;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 700px) { .nh-crm-search { display: none; } }
+
+        .nh-crm-nav { display: flex; flex-direction: column; gap: 0.15rem; }
+        .nh-crm-nav-item {
+            display: flex; align-items: center; gap: 0.65rem;
+            padding: 0.55rem 0.65rem;
+            border-radius: 0.5rem;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .nh-crm-nav-item.active { background: rgba(217,70,239,0.14); color: #ffffff; }
+        .nh-crm-nav-item svg { width: 15px; height: 15px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+        @media (max-width: 700px) { .nh-crm-nav-item span { display: none; } .nh-crm-nav-item { justify-content: center; } }
+
+        .nh-crm-main {
+            background: #fbfafa;
+            padding: 1.2rem 1.4rem;
+            overflow: hidden;
+        }
+        .nh-crm-topbar {
+            display: flex; justify-content: space-between; align-items: baseline;
+            margin-bottom: 1rem;
+        }
+        .nh-crm-topbar-title { font-size: 1.05rem; font-weight: 800; color: var(--nh-ink); }
+        .nh-crm-topbar-sub { font-size: 0.72rem; color: var(--nh-ink-soft); }
+        .nh-crm-add-btn {
+            background: var(--gradient);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.4rem 0.85rem;
+            border-radius: 0.5rem;
+        }
+
+        .nh-crm-kanban {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.65rem;
+            align-items: start;
+        }
+        @media (max-width: 700px) { .nh-crm-kanban { grid-template-columns: repeat(2, 1fr); } }
+
+        .nh-crm-col {
+            background: #ffffff;
+            border: 1px solid #eee6ec;
+            border-radius: 0.65rem;
+            padding: 0.55rem;
+            display: flex; flex-direction: column; gap: 0.5rem;
+            min-height: 260px;
+        }
+        .nh-crm-col-head {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.4rem 0.5rem;
+            border-radius: 0.4rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--nh-ink);
+        }
+        .nh-crm-col-tag { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 0.35rem; }
+        .nh-crm-col-hot   .nh-crm-col-head { background: rgba(239, 68, 68, 0.08); }
+        .nh-crm-col-hot   .nh-crm-col-tag  { background: #ef4444; }
+        .nh-crm-col-warm  .nh-crm-col-head { background: rgba(251, 191, 36, 0.10); }
+        .nh-crm-col-warm  .nh-crm-col-tag  { background: #f59e0b; }
+        .nh-crm-col-cool  .nh-crm-col-head { background: rgba(59, 130, 246, 0.09); }
+        .nh-crm-col-cool  .nh-crm-col-tag  { background: #3b82f6; }
+        .nh-crm-col-call  .nh-crm-col-head { background: rgba(217, 70, 239, 0.09); }
+        .nh-crm-col-call  .nh-crm-col-tag  { background: #d946ef; }
+        .nh-crm-col-count { color: var(--nh-ink-soft); font-weight: 500; font-size: 0.68rem; }
+
+        .nh-crm-card {
+            background: #ffffff;
+            border: 1px solid #f0eaf1;
+            border-left: 3px solid var(--pink);
+            border-radius: 0.5rem;
+            padding: 0.55rem 0.65rem;
+            box-shadow: 0 2px 6px -3px rgba(23,19,27,0.06);
+        }
+        .nh-crm-col-hot   .nh-crm-card { border-left-color: #ef4444; }
+        .nh-crm-col-warm  .nh-crm-card { border-left-color: #f59e0b; }
+        .nh-crm-col-cool  .nh-crm-card { border-left-color: #3b82f6; }
+        .nh-crm-col-call  .nh-crm-card { border-left-color: #d946ef; }
+        .nh-crm-card-name { font-size: 0.75rem; font-weight: 700; color: var(--nh-ink); margin-bottom: 0.3rem; }
+        .nh-crm-card-badge {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            background: rgba(59,130,246,0.1);
+            color: #2563eb;
+            margin-bottom: 0.4rem;
+        }
+        .nh-crm-card-note {
+            font-size: 0.65rem;
+            color: var(--nh-ink-soft);
+            padding-top: 0.35rem;
+            border-top: 1px solid #f4eef4;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .nh-crm-card-note::before {
+            content: '';
+            width: 6px; height: 6px; border-radius: 50%;
+            background: linear-gradient(135deg, #d946ef, #06b6d4);
+            flex-shrink: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -1622,6 +1835,127 @@
                     <div>
                         <h3>Day 5+: live and generating leads</h3>
                         <p>Campaigns go live, leads start flowing into your dashboard, and we optimise and scale from there. Results are guaranteed within 14 days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Your CRM -->
+<section class="nh-crm-band" id="your-crm">
+    <div class="nh-wrap">
+        <div class="nh-section-head fade-up">
+            <span class="nh-eyebrow"><span class="nh-dot"></span>Your CRM</span>
+            <h2 style="margin-top:0.75rem;">Every lead. Every conversation.<br>All in one place.</h2>
+            <p class="nh-lede">You get full access to our all-in-one CRM the moment you sign on. Build your own customer database, message leads across every channel they actually respond on, and let AI handle the questions and bookings while you focus on closing.</p>
+        </div>
+
+        <div class="nh-crm-grid">
+            <div class="fade-up">
+                <ul class="nh-crm-features">
+                    <li class="nh-crm-feature">
+                        <span class="nh-crm-feat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg></span>
+                        <div>
+                            <strong>Your own customer database</strong>
+                            <p>Every lead we send you plus every contact you add, in one searchable place. Yours to keep, forever.</p>
+                        </div>
+                    </li>
+                    <li class="nh-crm-feature">
+                        <span class="nh-crm-feat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg></span>
+                        <div>
+                            <strong>Omni-channel messaging</strong>
+                            <p>SMS, WhatsApp, email and calls, all from one inbox. Reach every lead on the channel they'll actually reply on.</p>
+                        </div>
+                    </li>
+                    <li class="nh-crm-feature">
+                        <span class="nh-crm-feat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V3"/><circle cx="12" cy="3" r="1"/><path d="M8 14h.01"/><path d="M16 14h.01"/><path d="M9 17c1 1 5 1 6 0"/></svg></span>
+                        <div>
+                            <strong>AI chatbots &amp; auto-replies</strong>
+                            <p>AI qualifies enquiries, answers common questions and hands the hot ones straight to you, day or night.</p>
+                        </div>
+                    </li>
+                    <li class="nh-crm-feature">
+                        <span class="nh-crm-feat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h4"/></svg></span>
+                        <div>
+                            <strong>Built-in booking system</strong>
+                            <p>Leads book themselves into your diary. No phone tag, no missed slots, no manual back-and-forth.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fade-up">
+                <div class="nh-crm-mockup" aria-hidden="true">
+                    <div class="nh-crm-browser">
+                        <span class="nh-crm-browser-dot r"></span>
+                        <span class="nh-crm-browser-dot y"></span>
+                        <span class="nh-crm-browser-dot g"></span>
+                        <span class="nh-crm-browser-url">platform.upscaleleadmarketing.co.uk</span>
+                    </div>
+                    <div class="nh-crm-app">
+                        <aside class="nh-crm-sidebar">
+                            <div class="nh-crm-brand-block">
+                                <div class="nh-crm-brand-avatar">Y</div>
+                                <div>
+                                    <div class="nh-crm-brand-name">Your Business</div>
+                                    <div class="nh-crm-brand-plan">Business plan</div>
+                                </div>
+                            </div>
+                            <div class="nh-crm-search">Search…</div>
+                            <nav class="nh-crm-nav">
+                                <span class="nh-crm-nav-item active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg><span>Dashboard</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Conversations</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Contacts</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span>Marketing</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Sales</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v6"/><path d="M12 17v6"/><path d="M4.22 4.22l4.24 4.24"/><path d="M15.54 15.54l4.24 4.24"/><path d="M1 12h6"/><path d="M17 12h6"/><path d="M4.22 19.78l4.24-4.24"/><path d="M15.54 8.46l4.24-4.24"/></svg><span>AI Automations</span></span>
+                                <span class="nh-crm-nav-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><span>Reports</span></span>
+                            </nav>
+                        </aside>
+                        <main class="nh-crm-main">
+                            <div class="nh-crm-topbar">
+                                <div>
+                                    <div class="nh-crm-topbar-title">Deals</div>
+                                    <div class="nh-crm-topbar-sub">634 deals · live pipeline</div>
+                                </div>
+                                <span class="nh-crm-add-btn">+ Add deal</span>
+                            </div>
+                            <div class="nh-crm-kanban">
+                                <div class="nh-crm-col nh-crm-col-hot">
+                                    <div class="nh-crm-col-head"><span><span class="nh-crm-col-tag"></span>New HOT leads</span><span class="nh-crm-col-count">0</span></div>
+                                </div>
+                                <div class="nh-crm-col nh-crm-col-warm">
+                                    <div class="nh-crm-col-head"><span><span class="nh-crm-col-tag"></span>Contact made</span><span class="nh-crm-col-count">45</span></div>
+                                    <div class="nh-crm-card">
+                                        <div class="nh-crm-card-name">Damian C.</div>
+                                        <span class="nh-crm-card-badge">Medium</span>
+                                        <div class="nh-crm-card-note">Ready for action</div>
+                                    </div>
+                                    <div class="nh-crm-card">
+                                        <div class="nh-crm-card-name">Philip B.</div>
+                                        <span class="nh-crm-card-badge">Medium</span>
+                                        <div class="nh-crm-card-note">Follow up today</div>
+                                    </div>
+                                </div>
+                                <div class="nh-crm-col nh-crm-col-cool">
+                                    <div class="nh-crm-col-head"><span><span class="nh-crm-col-tag"></span>No contact</span><span class="nh-crm-col-count">253</span></div>
+                                    <div class="nh-crm-card">
+                                        <div class="nh-crm-card-name">Julie S.</div>
+                                        <span class="nh-crm-card-badge">Medium</span>
+                                        <div class="nh-crm-card-note">Note 6 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="nh-crm-col nh-crm-col-call">
+                                    <div class="nh-crm-col-head"><span><span class="nh-crm-col-tag"></span>Callback</span><span class="nh-crm-col-count">33</span></div>
+                                    <div class="nh-crm-card">
+                                        <div class="nh-crm-card-name">Marvin M.</div>
+                                        <span class="nh-crm-card-badge">Medium</span>
+                                        <div class="nh-crm-card-note">Scheduled Fri</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
                     </div>
                 </div>
             </div>
