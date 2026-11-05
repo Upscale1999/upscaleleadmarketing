@@ -35,3 +35,6 @@ Thumbs.db
 
 # Local scratch / temp
 /tmp-scratch/
+
+# Scraped lead data (contains phone numbers — keep out of git)
+/leads/
